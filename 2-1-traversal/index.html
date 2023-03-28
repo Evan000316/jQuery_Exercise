@@ -147,7 +147,41 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
+    // click li to change color
+    $("#Now").click(function(){
+      // $("#Now").css("background-color", 'yellowgreen'); //method1
+      // $(this).css("background-color", 'yellowgreen');   //method2
+      // $(this).next().css("background-color", 'yellowgreen'); //sibling change color
+      // $(this).prev().prev().css("background-color", 'yellowgreen'); //sibling change color
 
+      // $(this).nextAll().css("background-color", 'yellowgreen'); // all next sibling change color
+      // $(this).prevAll().css("background-color", 'yellowgreen'); //all previous sibling change color
+      // $(this).siblings().css("background-color", 'yellowgreen'); // all sibling change color
+
+      // $(this).siblings().first().css("background-color", 'yellowgreen'); //最大的兄弟
+      // $(this).siblings().last().css("background-color", 'yellowgreen');  //最小的兄弟
+      // $(this).siblings().eq(0).css("background-color", 'yellowgreen'); //指定index
+
+      // $(this).parent().css("background-color", 'yellowgreen'); //尋找父層
+      // $(this).parents().css("background-color", 'yellowgreen'); //尋找所有父層
+
+      // $(this).parent().siblings().css("background-color", 'yellowgreen'); //父層的sibling
+      
+      // $(this).parent().children().css("background-color", 'yellowgreen'); //把包含自己的所有父層的兒子全選
+
+      // $(this).parent().children().filter(":odd").css("background-color", 'yellowgreen');// css: nth-child(odd) 選取奇數
+      // $(this).parent().children().filter(":even").css("background-color", 'yellowgreen');// css: nth-child(even) 選取偶數
+
+      // $(this).parent().siblings().first().find("li").css("background-color", 'yellowgreen');// 堂兄弟 find()
+      // $(this).parent().siblings().first().children().css("background-color", 'yellowgreen');// 堂兄弟
+
+      // $(this).parent().siblings().eq(3).children().first().css("background-color", 'yellowgreen'); //選取親戚的大兒子
+      // $(this).parent().siblings().eq(3).children().eq(2).css("background-color", 'yellowgreen'); //選取親戚的次子
+      // $(this).parent().siblings().eq(3).children().filter(":odd").css("background-color", 'yellowgreen'); //親戚的奇數兒子
+
+      // $(this).parent().siblings("ul").eq(2).children().filter(":odd").css("background-color", 'yellowgreen');  //找某個親戚家的小孩(從父親開始找) //siblings("尋找目標")  不是用find()
+      $(this).parent().siblings().has("li").eq(2).children().filter(":odd").css("background-color", 'yellowgreen'); //從小孩開始找
+    });
   </script>
 </body>
 
