@@ -11,7 +11,16 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
+		let  num = 0;
 
+		function todo(){
+			num++;
+			console.log(num);
+			// $("body").html("<h1>" + num +"</h1>");
+			$("body").html(`<h1>${num}</h1>`);
+		}
+		//設置間隔(物件, 時間間隔)
+		setInterval(todo, 100);
 	</script>
 </body>
 

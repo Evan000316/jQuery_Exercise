@@ -16,7 +16,17 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
+		const money = 300;
 
+		if(money >= 150){
+			$("#Todo").text("一比呀呀");
+		} else {
+			$("#Todo").text("吃土囉");
+		}
+
+		// 放字
+		$("#Money").text(money); //顯示一般文字
+		// $("#Money").html('<h1 display = "inline">3000</h1>');//可以使用html標籤
 	</script>
 </body>
 
