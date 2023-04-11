@@ -14,7 +14,7 @@ const  duration = 1000;
 function setSlide(){
     // index = index < 4; index += 1 : 0;
     index++;
-    if(index > 4){
+    if(index > $imgResp.length - 1){
         index = 0;
     }
     console.log(index);
